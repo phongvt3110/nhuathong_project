@@ -1,0 +1,11 @@
+Options All -Indexes
+ErrorDocument 403 /403.html
+RewriteEngine On
+RewriteRule ^([^/]*)\.html$ /?m=1&cid=$1 [L]
+RewriteEngine On
+RewriteRule ^gia-son/([^/]*)/([^/]*)$ /?m=1&cid=$1&p=$2 [L]
+RewriteEngine On
+RewriteRule ^son-nha/([^/]*)/([^/]*)\.html$ /?m=2&cid=$1&pid=$2 [L]
+RewriteEngine On
+RewriteRule ^lien-he\.html$ /?m=3 [L]
+

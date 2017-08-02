@@ -1,0 +1,10 @@
+.text {PADDING-RIGHT: 10px; PADDING-LEFT: 20px}
+TD {FONT-SIZE: 11px; FONT-FAMILY: Tahoma,sans-serif}
+LI {LIST-STYLE-IMAGE: url(images/pic.jpg)}
+A {TEXT-DECORATION: none}
+.bg {BACKGROUND-POSITION: 50% top; BACKGROUND-REPEAT: no-repeat}
+.bg2 {PADDING-RIGHT: 10px; BACKGROUND-POSITION: 50% top; PADDING-LEFT: 20px; BACKGROUND-REPEAT: no-repeat}
+a.linkTD{FONT-SIZE: 11px; COLOR: #FFFFFF; TEXT-DECORATION: none; FONT-FAMILY: Tahoma,sans-serif}
+a.linkTD:hover{FONT-SIZE: 11px; TEXT-DECORATION: underline; COLOR: #FFFFFF; FONT-FAMILY: Tahoma,sans-serif}
+a.linkAT{FONT-SIZE: 11px; COLOR: #FFFFFF; TEXT-DECORATION: none; FONT-FAMILY: Tahoma,sans-serif}
+a.linkAT:hover{FONT-SIZE: 11px; TEXT-DECORATION: underline; COLOR: #FCDFFF; FONT-FAMILY: Tahoma,sans-serif}
