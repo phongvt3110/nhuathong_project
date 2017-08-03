@@ -26,10 +26,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
               <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-              <folding>
-                <marker date="1501747423510" expanded="true" signature="1666:1787" ph="INSERT INTO upload... " />
-                <marker date="1501747423510" expanded="true" signature="1860:1941" ph="SELECT MAX(i... upload" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,11 +36,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3900">
               <caret line="260" column="24" lean-forward="false" selection-start-line="260" selection-start-column="24" selection-end-line="260" selection-end-column="24" />
-              <folding>
-                <marker date="1501752465582" expanded="true" signature="5393:5555" ph="INSERT INTO product... " />
-                <marker date="1501752465582" expanded="true" signature="6345:6507" ph="INSERT INTO product... " />
-                <marker date="1501752465582" expanded="true" signature="8941:9047" ph="SELECT id, n... category" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,9 +46,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3045">
               <caret line="203" column="7" lean-forward="false" selection-start-line="203" selection-start-column="7" selection-end-line="203" selection-end-column="7" />
-              <folding>
-                <marker date="1501752465422" expanded="true" signature="3419:3481" ph="INSERT INTO slide... " />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,19 +55,19 @@
         <entry file="file://$PROJECT_DIR$/modules/center_top.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
               <folding>
-                <marker date="1501753068114" expanded="true" signature="1058:1089" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="1370:1400" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="1576:1634" ph="SELECT id,na... product" />
-                <marker date="1501753068114" expanded="true" signature="2356:2386" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="2561:2620" ph="SELECT id,na... product" />
-                <marker date="1501753068114" expanded="true" signature="3349:3379" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="3529:3588" ph="SELECT id,na... product" />
-                <marker date="1501753068114" expanded="true" signature="4315:4345" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="4494:4553" ph="SELECT id,na... product" />
-                <marker date="1501753068114" expanded="true" signature="5280:5310" ph="..." />
-                <marker date="1501753068114" expanded="true" signature="5465:5524" ph="SELECT id,na... product" />
+                <marker date="1501773615064" expanded="true" signature="1058:1089" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="1370:1400" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="1576:1634" ph="SELECT id,na... product" />
+                <marker date="1501773615064" expanded="true" signature="2356:2386" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="2561:2620" ph="SELECT id,na... product" />
+                <marker date="1501773615064" expanded="true" signature="3349:3379" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="3529:3588" ph="SELECT id,na... product" />
+                <marker date="1501773615064" expanded="true" signature="4315:4345" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="4494:4553" ph="SELECT id,na... product" />
+                <marker date="1501773615064" expanded="true" signature="5280:5310" ph="..." />
+                <marker date="1501773615064" expanded="true" signature="5465:5524" ph="SELECT id,na... product" />
               </folding>
             </state>
           </provider>
@@ -87,9 +78,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1501701137257" expanded="true" signature="1043:1107" ph="INSERT INTO contacts... " />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -230,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -268,6 +256,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,25 +290,27 @@
       <workItem from="1501699692940" duration="2003000" />
       <workItem from="1501726427015" duration="19566000" />
       <workItem from="1501771463781" duration="64000" />
+      <workItem from="1501773821507" duration="197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22252000" />
+    <option name="totallyTimeSpent" value="22449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24090908" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2408492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -512,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -597,11 +587,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
           <caret line="221" column="15" lean-forward="false" selection-start-line="221" selection-start-column="15" selection-end-line="221" selection-end-column="15" />
-          <folding>
-            <marker date="1501701679409" expanded="true" signature="180:230" ph="SELECT city province" />
-            <marker date="1501701679409" expanded="true" signature="2260:2381" ph="INSERT INTO upload... " />
-            <marker date="1501701679409" expanded="true" signature="2454:2535" ph="SELECT MAX(i... upload" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -630,9 +616,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1501701137257" expanded="true" signature="1043:1107" ph="INSERT INTO contacts... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -664,10 +648,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding>
-            <marker date="1501747423510" expanded="true" signature="1666:1787" ph="INSERT INTO upload... " />
-            <marker date="1501747423510" expanded="true" signature="1860:1941" ph="SELECT MAX(i... upload" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -675,11 +656,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3900">
           <caret line="260" column="24" lean-forward="false" selection-start-line="260" selection-start-column="24" selection-end-line="260" selection-end-column="24" />
-          <folding>
-            <marker date="1501752465582" expanded="true" signature="5393:5555" ph="INSERT INTO product... " />
-            <marker date="1501752465582" expanded="true" signature="6345:6507" ph="INSERT INTO product... " />
-            <marker date="1501752465582" expanded="true" signature="8941:9047" ph="SELECT id, n... category" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -687,9 +664,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3045">
           <caret line="203" column="7" lean-forward="false" selection-start-line="203" selection-start-column="7" selection-end-line="203" selection-end-column="7" />
-          <folding>
-            <marker date="1501752465422" expanded="true" signature="3419:3481" ph="INSERT INTO slide... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,19 +692,19 @@
     <entry file="file://$PROJECT_DIR$/modules/center_top.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding>
-            <marker date="1501753068114" expanded="true" signature="1058:1089" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="1370:1400" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="1576:1634" ph="SELECT id,na... product" />
-            <marker date="1501753068114" expanded="true" signature="2356:2386" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="2561:2620" ph="SELECT id,na... product" />
-            <marker date="1501753068114" expanded="true" signature="3349:3379" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="3529:3588" ph="SELECT id,na... product" />
-            <marker date="1501753068114" expanded="true" signature="4315:4345" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="4494:4553" ph="SELECT id,na... product" />
-            <marker date="1501753068114" expanded="true" signature="5280:5310" ph="..." />
-            <marker date="1501753068114" expanded="true" signature="5465:5524" ph="SELECT id,na... product" />
+            <marker date="1501773615064" expanded="true" signature="1058:1089" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="1370:1400" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="1576:1634" ph="SELECT id,na... product" />
+            <marker date="1501773615064" expanded="true" signature="2356:2386" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="2561:2620" ph="SELECT id,na... product" />
+            <marker date="1501773615064" expanded="true" signature="3349:3379" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="3529:3588" ph="SELECT id,na... product" />
+            <marker date="1501773615064" expanded="true" signature="4315:4345" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="4494:4553" ph="SELECT id,na... product" />
+            <marker date="1501773615064" expanded="true" signature="5280:5310" ph="..." />
+            <marker date="1501773615064" expanded="true" signature="5465:5524" ph="SELECT id,na... product" />
           </folding>
         </state>
       </provider>
