@@ -41,14 +41,14 @@ if (isset($_POST["submit"]))
 			$sql = "INSERT INTO category (name,parent_id, position, sub_position, subsub_position) VALUES (";
 			$sql.= "'$p_name', $p_parent_id, $p_position, 0, 0)";
 			
-			mysql_query($sql, $link);
+			mysqli_query($link, $sql);
 		}
 		else
 		{
 			
 			$sql = "SELECT position, sub_position FROM category WHERE id = $p_parent_id";
-			$result = mysql_query($sql, $link);
-			if ($row=mysql_fetch_array($result))
+			$result = mysqli_query($link, $sql);
+			if ($row=mysqli_fetch_array($result))
 			{
 				$p_position = (int)$row["position"];
 				$p_sub_position = (int)$row["sub_position"];
@@ -60,7 +60,7 @@ if (isset($_POST["submit"]))
 				
 				$sql = "INSERT INTO category (name, parent_id, position, sub_position, subsub_position) VALUES (";
 				$sql.= "'$p_name',$p_parent_id, $p_position, $p_sub_position, $p_subsub_position)";
-				mysql_query($sql, $link);				
+				mysqli_query($link, $sql);				
 			}
 			else
 			{
@@ -128,8 +128,8 @@ else
                       		<option value=0>--- Ngành nghề chính ---</option>
 <?php
 $sql = "SELECT id, name, parent_id FROM category WHERE subsub_position = 0 ORDER BY position, sub_position, id"; 
-$result = mysql_query($sql, $link);
-while ($row=mysql_fetch_array($result))
+$result = mysqli_query($link, $sql);
+while ($row=mysqli_fetch_array($result))
 {
 	$p_id = $row["id"];
 	$p_name = $row["name"];
@@ -224,7 +224,7 @@ while ($row=mysql_fetch_array($result))
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

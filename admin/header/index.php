@@ -83,7 +83,7 @@ if (isset($_POST["submit"]))
 		$sql .= "support = '$support' ";
 		$sql .= " WHERE id = $id";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 		
 ?>
       	  	
@@ -116,8 +116,8 @@ else
 		$id = (int)$_GET["id"];
 		$sql = "SELECT id,title,thumb,phone1,phone2,support FROM menu_header WHERE id = $id"; 
 		//echo $sql;exit;
-		$result = mysql_query($sql, $link);
-		if ($row=mysql_fetch_array($result))
+		$result = mysqli_query($link, $sql);
+		if ($row=mysqli_fetch_array($result))
 		{
 			$p_id = (int)$row["id"];
 			$p_title = $row["title"];
@@ -187,7 +187,7 @@ else
 				}
 	}	
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
             </TD>

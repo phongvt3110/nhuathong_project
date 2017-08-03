@@ -3,4 +3,4 @@
         <TBODY>
         <TR>
           <TD class=text align=left height=30>
-    		<DIV align="center"><font color="#000000">Copyright © 2017-2020 sonnhatotdep.vn All rights reserved.</font></DIV></TD></TR></TBODY></TABLE>
+    		<DIV align="center"><font color="#000000">Copyright © 2017-2020 nhuathong.vn All rights reserved.</font></DIV></TD></TR></TBODY></TABLE>

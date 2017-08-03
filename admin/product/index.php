@@ -46,9 +46,9 @@ $offset = ($pageNum - 1) * $rowsPerPage;
 	
 $sql = "SELECT a.id, a.title, b.name, a.postdate FROM product a INNER JOIN category b ON a.cateid=b.id ORDER BY a.id DESC LIMIT $offset, $rowsPerPage";
 
-$result = mysql_query($sql, $link);
+$result = mysqli_query($link, $sql);
 
-while ($row=mysql_fetch_array($result))
+while ($row=mysqli_fetch_array($result))
 {
 	$p_id = (int)$row["id"];
 	$p_name = htmlspecialchars($row["title"], ENT_QUOTES);
@@ -72,8 +72,8 @@ while ($row=mysql_fetch_array($result))
 <?php            		  
 // how many rows we have in database
 $sql   = "SELECT COUNT(id) AS numrows FROM product";
-$result = mysql_query($sql, $link);
-$row     = mysql_fetch_array($result);
+$result = mysqli_query($link, $sql);
+$row     = mysqli_fetch_array($result);
 $numrows = $row['numrows'];
 
 // how many pages we have when using paging?
@@ -139,7 +139,7 @@ else
 // print the navigation link
 echo "<p align='center'>Page: " . $first . $prev . $prev1 . $nav . $next1 . $next . $last . "</p>";
 
-mysql_close($link)
+mysqli_close($link)
 ?>              		 
                 </td>
               </tr>

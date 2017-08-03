@@ -1,9 +1,9 @@
 <?php
 //Khai bao ket noi, neu ket noi khong thanh cong, xuat hien thong bao loi	
-$link = mysql_connect("localhost", "root", "") or die("Could not connect to database");
+$link = mysqli_connect("localhost", "root", "monkey3110","nhuathong") or die("Could not connect to database");
 
 //Mo co so du lieu
-mysql_select_db("nhuathong", $link);
+mysqli_select_db($link,"nhuathong");
 
 define("LOG_TBL", "log"); 
 define("HIT_COUNTER_TBL", "hit_counter"); 

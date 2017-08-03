@@ -44,9 +44,9 @@ if ($pageNum == 0) 	$pageNum = 1;
 $offset = ($pageNum - 1) * $rowsPerPage;
 
 $sql = "SELECT id,user,types FROM admin_account  ORDER BY id ASC LIMIT $offset, $rowsPerPage";
-$result = mysql_query($sql, $link);
+$result = mysqli_query($link, $sql);
 
-while ($row=mysql_fetch_row($result))
+while ($row=mysqli_fetch_row($result))
 {
 	$p_id = (int)$row[0];
 	$p_user =$row[1];
@@ -71,8 +71,8 @@ echo "<td align = 'center'><a href='edit.php?id=$p_id'><img src='../images/b_edi
 <?php              		  
 // how many rows we have in database
 $sql   = "SELECT COUNT(id) AS numrows FROM admin_account";
-$result = mysql_query($sql, $link);
-$row     = mysql_fetch_assoc($result);
+$result = mysqli_query($link, $sql);
+$row     = mysqli_fetch_assoc($result);
 $numrows = $row['numrows'];
 
 // how many pages we have when using paging?
@@ -137,8 +137,8 @@ else
 	$next1 = '';
 // print the navigation link
 echo "<p align='center'>Page: " . $first . $prev . $prev1 . $nav . $next1 . $next . $last . "</p>";
-mysql_free_result($result);
-mysql_close($link)
+mysqli_free_result($result);
+mysqli_close($link)
 ?>              		 
                 </td>
               </tr>

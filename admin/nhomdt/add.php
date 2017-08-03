@@ -53,7 +53,7 @@ if (isset($_POST["submit"]))
 	$sql = "INSERT INTO admin_account(user,pass,types) VALUES (";
 	$sql.= "'$p_ten','$p_matkhau',2)";
 	//echo $sql;exit;
-	mysql_query($sql, $link);
+	mysqli_query($link, $sql);
 		
 ?>
 
@@ -138,7 +138,7 @@ else
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

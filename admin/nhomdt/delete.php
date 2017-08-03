@@ -18,8 +18,8 @@ if (isset($_GET["id"]))
 		
 		$id = (int)$_GET['id'];
 		$sql = "DELETE FROM admin_account WHERE id = $id"; 
-		mysql_query($sql, $link);
-		mysql_close($link);
+		mysqli_query($link, $sql);
+		mysqli_close($link);
 ?>
 <table border="0" cellpadding="0" cellspacing="8" width="100%">
               <tr>

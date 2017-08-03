@@ -46,30 +46,30 @@ if (isset($_POST['submit']))
 			$sql .= "sub_position = 0, ";
 			$sql .= "subsub_position = 0 ";
 			$sql .= " WHERE id = $id";
-			mysql_query($sql, $link);
+			mysqli_query($link, $sql);
 			
 			// Cập nhật các Danh mục CHA
 			$sql = "UPDATE category SET position = $p_position WHERE parent_id = $id";	
-			mysql_query($sql, $link);
+			mysqli_query($link, $sql);
 			
 			$sql = "SELECT id FROM category WHERE parent_id = $id";
-			$result = mysql_query($sql, $link);
-			while ($row=mysql_fetch_array($result))
+			$result = mysqli_query($link, $sql);
+			while ($row=mysqli_fetch_array($result))
 			{
 				$arr[] =(int)$row["id"];
 			}
 			
 			// Cập nhật các Danh mục CON
 			$sql = "UPDATE category SET position = $p_position WHERE parent_id IN (".implode(',', $arr).")";	
-			mysql_query($sql, $link);
+			mysqli_query($link, $sql);
 						
 		}
 		else
 		{
 			/////////////////
 			$sql = "SELECT position, sub_position FROM category WHERE id = $p_parent_id";
-			$result = mysql_query($sql, $link);
-			if ($row=mysql_fetch_array($result))
+			$result = mysqli_query($link, $sql);
+			if ($row=mysqli_fetch_array($result))
 			{
 				$p_position = (int)$row["position"];
 				$p_sub_position = (int)$row["sub_position"];
@@ -86,11 +86,11 @@ if (isset($_POST['submit']))
 				$sql .= "sub_position = $p_sub_position, ";
 				$sql .= "subsub_position = $p_subsub_position ";
 				$sql .= " WHERE id = $id";
-				mysql_query($sql, $link);
+				mysqli_query($link, $sql);
 				
 				// Cập nhật các Danh mục CON
 				$sql = "UPDATE category SET position = $p_position, sub_position = $p_sub_position WHERE parent_id = $id";	
-				mysql_query($sql, $link);
+				mysqli_query($link, $sql);
 				
 			}
 			else
@@ -132,8 +132,8 @@ else
 		
 		$id = (int)$_GET['id'];
 		$sql = "SELECT * FROM category WHERE id = $id"; 
-		$result = mysql_query($sql, $link);
-		if ($row=mysql_fetch_array($result))
+		$result = mysqli_query($link, $sql);
+		if ($row=mysqli_fetch_array($result))
 		{
 			$p_id = (int)$row["id"];
 			$p_name = htmlspecialchars($row["name"], ENT_QUOTES);
@@ -174,8 +174,8 @@ else
 <?php
 $sql = "SELECT id, name, parent_id FROM category WHERE subsub_position = 0 ORDER BY position, sub_position, id"; 
 //$sql = "SELECT id, name, parent_id FROM category ORDER BY id ASC"; 
-$result = mysql_query($sql, $link);
-while ($row=mysql_fetch_array($result))
+$result = mysqli_query($link, $sql);
+while ($row=mysqli_fetch_array($result))
 {
 	$p_id2 = $row["id"];
 	$p_name2 = $row["name"];
@@ -285,7 +285,7 @@ while ($row=mysql_fetch_array($result))
 				}
 	}	
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
             </TD>

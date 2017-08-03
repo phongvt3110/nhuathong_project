@@ -7,11 +7,11 @@ function cleanQuery($string)	// Preventing SQL Injection with MySQL and PHP
   }
   if (phpversion() >= '4.3.0')
   {
-    $string = mysql_real_escape_string($string);
+    $string = mysqli_real_escape_string($string);
   }
   else
   {
-    $string = mysql_escape_string($string);
+    $string = mysqli_escape_string($string);
   }
   return $string;
 }
@@ -96,15 +96,15 @@ function uploadFile($x, $link)
 		$query = "INSERT INTO upload (name, size, type, content ) ".
 		         "VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
 
-		mysql_query($query) or die('Error, query failed');
+		mysqli_query($query) or die('Error, query failed');
 		
 		$query = "SELECT MAX(id) as vid FROM upload WHERE name = '$fileName' AND size = '$fileSize'";
 		
-		$result = mysql_query($query, $link);
+		$result = mysqli_query($query, $link);
 		$id = 0;
-		if (mysql_num_rows($result)!=0)
+		if (mysqli_num_rows($result)!=0)
 		{
-			while ($row=mysql_fetch_array($result))
+			while ($row=mysqli_fetch_array($result))
 			{
 			$id = $row["vid"];
 			}

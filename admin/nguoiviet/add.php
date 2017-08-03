@@ -180,7 +180,7 @@ if(isset($_POST['btnluu'])=="Lưu tạm")
 		$sql.= "'$title','$name', '$serialno', '$summary', '$detail',$category,'$comment', '$smallimg', '$largeimg', NOW(), 0, $price, $lang,$hot,0,'$author')";
 		//echo $sql;exit;
 		echo'<meta http-equiv="refresh" content="0;url=index.php">';
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 		
 		   
 }else if (isset($_POST['btnthem'])=='Thêm mới'){
@@ -201,7 +201,7 @@ if(isset($_POST['btnluu'])=="Lưu tạm")
 		$sql = "INSERT INTO product (title,name, serialno, summary, detail, cateid,comment, thumb_photo, origin_photo, postdate, counter, price, lang,hot,actives,author) VALUES (";
 		$sql.= "'$title','$name', '$serialno', '$summary', '$detail',$category,'$comment', '$smallimg', '$largeimg', NOW(), 0, $price, $lang,$hot,0,'$author')";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 ?>
 
 		
@@ -269,8 +269,8 @@ else
                       		<option value=0>--- Select ---</option>
 <?php
 $sql = "SELECT id, name, parent_id, subsub_position FROM category ORDER BY position, sub_position, subsub_position"; 
-$result = mysql_query($sql, $link);
-while ($row=mysql_fetch_array($result))
+$result = mysqli_query($link, $sql);
+while ($row=mysqli_fetch_array($result))
 {
 	$p_id = $row["id"];
 	$p_name = $row["name"];
@@ -409,7 +409,7 @@ while ($row=mysql_fetch_array($result))
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

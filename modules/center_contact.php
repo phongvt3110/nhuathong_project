@@ -36,16 +36,16 @@ function IsInjected($str)
 if (isset($_POST['send']))	///////////////////////////////////////////
 {
 	$errors = '';
-	$your_name = mysql_real_escape_string($_POST['contact_name']);
-	$your_email = mysql_real_escape_string($_POST['contact_email']);
-	$contact_message = mysql_real_escape_string($_POST['contact_message']);
+	$your_name = mysqli_real_escape_string($_POST['contact_name']);
+	$your_email = mysqli_real_escape_string($_POST['contact_email']);
+	$contact_message = mysqli_real_escape_string($_POST['contact_message']);
 	
 	
 		$ip = $_SERVER['REMOTE_ADDR'];
 		$sql = "INSERT INTO contacts (name, email, message, posttime, ip) VALUES ";
 		$sql .= "('$your_name', '$your_email', '$contact_message', NOW(), '$ip')";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 		echo "<p class='err'>Hoàn thành cập nhật gửi liên hệ</p>";
 		$_SESSION['6_letters_code'] = null;
 		

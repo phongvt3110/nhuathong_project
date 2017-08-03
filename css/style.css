@@ -129,7 +129,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 
 .list_ring ul {background:#fff;  -moz-box-shadow: 0.8px 0.6px 1px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0.8px 0.6px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0.8px 0.6px 1px rgba(0, 0, 0, 0.1); float: left; width: 100%;}
+    box-shadow: 0.8px 0.6px 1px rgba(0, 0, 0, 0.1); float: left; width: 100%;
 }
 .cate_view .list_ring {
     -moz-border-radius: 0;
@@ -222,7 +222,7 @@ li.dropdown {position: inherit}
 
 .pagination li a {
     margin-right: 10px;
-    border-radius: 3px
+    border-radius: 3px;
 background-color: #FFF;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -473,7 +473,7 @@ p {
     text-transform: uppercase;
     font-size: 30px;
 	float: right;
-    padding-right: 10%;
+    padding-right: 2%;
 }
 .sodt{
     color: #3f0090;
@@ -556,5 +556,5 @@ blockquote{padding-right:16px}.post-content blockquote
 blockquote{padding-right:16px}.post-content blockquote
 .item2{display:block}.batv .mobile-support{display:block}.su-button-center{display:none}}@media all and (max-width: 414px){#move-to-top{display:none}.hotline-phone .item1,.hotline-phone
 .item2{display:block}.batv .mobile-support{display:block}.su-button-center{display:none}}@media all and (max-width: 484px){.post-content blockquote:after{display:none}.post-content
-blockquote{padding-right:16px}.post-content blockquote
+blockquote{padding-right:16px}.post-content blockquote}
 

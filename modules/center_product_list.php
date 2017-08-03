@@ -34,8 +34,8 @@
 									$sql = "SELECT * FROM product ORDER BY id DESC LIMIT $offset, $rowsPerPage";
 								else
 									$sql = "SELECT id,title,summary,thumb_photo,postdate FROM product where cateid =$catid  ORDER BY id ASC LIMIT $offset, $rowsPerPage";	
-								$result = mysql_query($sql, $link);
-								while ($row=mysql_fetch_array($result))
+								$result = mysqli_query($link,$sql);
+								while ($row=mysqli_fetch_array($result))
 								{
 									$id = $row["id"];
 									$title = $row["title"];
@@ -46,15 +46,15 @@
 							<li>
 							<div class="media post-item">
 								<div class="media-left">
-									<a href="<?php echo BASE_DOMAIN;?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html">
-										<div class="post-image"><img src="<?php echo BASE_DOMAIN;?>photo/thumb/<?php echo $thumb_photo; ?>" width="115px" height="115px"/></div>
+									<a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html">
+										<div class="post-image"><img src="<?php echo $GLOBAL['BASE_DOMAIN'];?>photo/thumb/<?php echo $thumb_photo; ?>" width="115px" height="115px"/></div>
 									</a>
 								</div>
 								<div class="media-right">
-								   <a href="<?php echo BASE_DOMAIN;?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html"><h4 class="galaxy-heading"><?php echo $title;?></h4></a>
+								   <a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html"><h4 class="galaxy-heading"><?php echo $title;?></h4></a>
 									<div class="post-time"><?php echo date("d/m/Y", strtotime($postdate));?></div>
 								   <p class="post-description text-justify"><?php echo $summary?></p>
-								   <a href="<?php echo BASE_DOMAIN;?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html" class="galaxy-button">Đọc tiếp</a>
+								   <a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>son-nha/<?php echo $catid?>/<?php echo $id?>-<?php echo seo(changeTitle(trim($title)));?>.html" class="galaxy-button">Đọc tiếp</a>
 						       </div>
 					        </div>
 							</li>
@@ -80,8 +80,8 @@
 					else
 						$sql   = "SELECT COUNT(id) AS numrows FROM product WHERE cateid = $catid";
 					//echo $sql;exit;
-					$result = mysql_query($sql, $link);
-					$row    = mysql_fetch_array($result);
+					$result = mysqli_query($link,$sql);
+					$row    = mysqli_fetch_array($result);
 					$numrows =(int)$row['numrows'];
 
 					// how many pages we have when using paging?
@@ -89,7 +89,7 @@
 
 					// print the link to access each page
 					//$self = "?m=1&cid=".$catid;
-					$self = BASE_DOMAIN ."gia-son/".$catid."-".seo(changeTitle(trim($title)))."";
+					$self = $GLOBAL['BASE_DOMAIN'] ."gia-son/".$catid."-".seo(changeTitle(trim($title)))."";
 					$nav  = '';
 
 					if ($pageNum+2>$maxPage)
@@ -117,7 +117,7 @@
 					   $page  = $pageNum - 1;
 					   $prev  = " <li><a href=\"$self/$page\">Trang Trước</a></li> ";
 
-					   $first = "<li> <a href=\"".BASE_DOMAIN ."gia-son.html\">Trang Đầu</a> ";
+					   $first = "<li> <a href=\"".$GLOBAL['BASE_DOMAIN'] ."gia-son.html\">Trang Đầu</a> ";
 					} 
 					
 
@@ -155,14 +155,14 @@
                          <div class="col-md-5 list_ring nopadright">
                             <?php 
 								$sql = "SELECT img  FROM slide where type=2"; 
-								$result = mysql_query($sql, $link);
-								while ($row=mysql_fetch_array($result))
+								$result = mysqli_query($link,$sql);
+								while ($row=mysqli_fetch_array($result))
 								{    
 									$img_photo = $row["img"];
 									$img_links = $row["links"];
 							?>	
 							<a href="<?php echo $img_links; ?>">
-                            <img src="<?php echo BASE_DOMAIN;?>photo/origin/<?php echo $img_photo; ?>"" class="img-rounded" alt="Cinque Terre" width="290px" height="250px"> 
+                            <img src="<?php echo $GLOBAL['BASE_DOMAIN'];?>photo/origin/<?php echo $img_photo; ?>"" class="img-rounded" alt="Cinque Terre" width="290px" height="250px"> 
 							<p style="margin-top:10px;"/>
 							</a>
 							<?php } ?>
@@ -170,7 +170,7 @@
                         
                  </div>
              <!-- pange-->
-			<div class="title_ring"><a href="<?php echo BASE_DOMAIN;?>" class="title_a">CHÚNG TÔI TRÊN FACEBOOK</a> </div>
+			<div class="title_ring"><a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>" class="title_a">CHÚNG TÔI TRÊN FACEBOOK</a> </div>
 				 <div class="row">
 				    <div class="col-xs-12 list_ring nopadright">
 					<div class="fb-page" data-href="https://www.facebook.com/S%C6%A1n-nh%C3%A0-t%E1%BB%91t-%C4%91%E1%BA%B9p-1900214316861207" data-width="220" data-height="220" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/S%C6%A1n-nh%C3%A0-t%E1%BB%91t-%C4%91%E1%BA%B9p-1900214316861207" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/S%C6%A1n-nh%C3%A0-t%E1%BB%91t-%C4%91%E1%BA%B9p-1900214316861207">Sơn nhà tốt đẹp</a></blockquote></div>
@@ -182,8 +182,8 @@
 							<ul>
 							<?php 
 								$sql = "SELECT id,title,thumb_photo FROM product where cateid=6"; 
-								$result = mysql_query($sql, $link);
-								while ($row=mysql_fetch_array($result))
+								$result = mysqli_query($link,$sql);
+								while ($row=mysqli_fetch_array($result))
 								{    
 									$id_9 = $row["id"];
 									$title_9 = $row["title"];
@@ -193,7 +193,7 @@
 							<li>
 							<div class="media post-item">
 							  <div class="media-right">
-								  <a href="<?php echo BASE_DOMAIN;?>son-nha/6/<?php echo $id_9?>-<?php echo seo(changeTitle(trim($title_9)));?>.html">
+								  <a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>son-nha/6/<?php echo $id_9?>-<?php echo seo(changeTitle(trim($title_9)));?>.html">
 								  <h4 class="galaxy-heading"><?php echo $title_9;?></h4></a>
 						       </div>
 					        </div>

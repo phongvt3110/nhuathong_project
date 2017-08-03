@@ -113,7 +113,7 @@ if (isset($_POST["submit"]))
 		$sql = "INSERT INTO services (title,summary, content,thumb, postdate) VALUES (";
 		$sql.= "'$title','$summary', '$content','$smallimg', NOW())";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 ?>
 
 		
@@ -229,7 +229,7 @@ else
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

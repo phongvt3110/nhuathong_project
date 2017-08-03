@@ -32,21 +32,21 @@ if (isset($_POST["submit"]))
 	
 	$sql = "SELECT * FROM admin_account WHERE user = '$user' and pass = '$pass'"; 
 	//echo $sql;exit;
-	$result = mysql_query($sql, $link);
-	if ($row=mysql_fetch_array($result))
+	$result = mysqli_query($link,$sql);
+	if ($row=mysqli_fetch_array($result))
 		{
 		$suid = $row["id"];
 		//session_register("suid");	
 		$_SESSION['s_uid']=$row["id"];
 		$_SESSION["s_level"] = $row["types"];
 		$_SESSION['s_name']=$row["user"];		
-		mysql_close($link);
+		mysqli_close($link);
 		echo "<p>You logged in successfully! Wait seconds for loading page ...</p>";
 		echo "<meta http-equiv='refresh' content='2;url=../home'>";
 		}	
 	else
 		{
-		mysql_close($link);	
+		mysqli_close($link);
 		echo "<p><font color='red'>You user/pass is incorrect! Please log in again ...</font></p>";
 		echo "<meta http-equiv='refresh' content='2;url=../login'>";
 		}	

@@ -50,11 +50,11 @@ if (isset($_POST["submit"]))
 			$pass1 = md5(md5($pass1));
 			
 			$sql = "SELECT user FROM admin_account WHERE id = $id AND pass = '$pass'";
-			$result = mysql_query($sql, $link);	
-			if (mysql_num_rows($result)>0)
+			$result = mysqli_query($link, $sql);	
+			if (mysqli_num_rows($result)>0)
 			{
 				$sql = "UPDATE admin_account SET pass = '$pass1' WHERE id = $id";
-				mysql_query($sql, $link);	
+				mysqli_query($link, $sql);	
 			}
 			else
 			{
@@ -93,8 +93,8 @@ if (isset($_GET['id']))
 		
 		$id = (int)$_GET['id'];
 		$sql = "SELECT * FROM admin_account WHERE id = $id"; 
-		$result = mysql_query($sql, $link);
-		if ($row=mysql_fetch_array($result))
+		$result = mysqli_query($link, $sql);
+		if ($row=mysqli_fetch_array($result))
 		{
 			$p_id = (int)$row["id"];
 ?>
@@ -149,7 +149,7 @@ if (isset($_GET['id']))
 		}
 	}
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
             </TD>

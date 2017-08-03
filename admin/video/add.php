@@ -120,7 +120,7 @@ else
 		$sql = "INSERT INTO video (name,createdate) VALUES (";
 		$sql.= "'$target_name', NOW())";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 ?>
 
 		
@@ -193,7 +193,7 @@ else
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

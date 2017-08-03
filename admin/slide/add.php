@@ -105,7 +105,7 @@ if (isset($_POST["submit"]))
 		$sql = "INSERT INTO slide (title, links, img,createdate,type) VALUES (";
 		$sql.= "'$title', '$tg', '$largeimg', NOW(),$type)";
 		//echo $sql;exit;
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 ?>
 
 		
@@ -201,7 +201,7 @@ else
                 
 <?php
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
                 

@@ -1,57 +1,57 @@
 <footer>
         <div class="container">
-         
+
           <div class="row">
 			<div class="col-sm-4">
-			     <?php 
-				$sql = "SELECT branch1,thumb  FROM menu_footer where id=2"; 
-				$result = mysql_query($sql, $link);
-				while ($row=mysql_fetch_array($result))
-				{    
+			     <?php
+				$sql = "SELECT branch1,thumb  FROM menu_footer where id=2";
+				$result = mysqli_query($link, $sql);
+				while ($row=mysqli_fetch_array($result))
+				{
 				$branch1 = $row["branch1"];
 				$thumb = $row["thumb"];
-				?>	
-                  <a href="<?php echo BASE_DOMAIN;?>"><img src="<?php echo BASE_DOMAIN;?>photo/origin/<?php echo $thumb?>" alt=""></a>
+				?>
+                  <a href="<?php echo $GLOBAL['BASE_DOMAIN'];?>"><img src="<?php echo $GLOBAL['BASE_DOMAIN'];?>photo/origin/<?php echo $thumb?>" alt=""></a>
                  <p class="info_text"><?php echo $branch1?></p>
-                  <?php }?> 
+                  <?php }?>
             </div>
             <div class="col-sm-4">
-				 <?php 
-				$sql = "SELECT branch1,branch2,branch3  FROM menu_footer where id=1"; 
-				$result = mysql_query($sql, $link);
-				while ($row=mysql_fetch_array($result))
-				{    
+				 <?php
+				$sql = "SELECT branch1,branch2,branch3  FROM menu_footer where id=1";
+				$result = mysqli_query($link, $sql);
+				while ($row=mysqli_fetch_array($result))
+				{
 				$branch1 = $row["branch1"];
 				$branch2 = $row["branch2"];
 				$branch3 = $row["branch3"];
-				
-				?>	
+
+				?>
                  <p class="info_text">
 				 <b>Miền Bắc</b>:<?php echo $branch1?></br>
 				 <b>Miền Trung</b>:<?php echo $branch2?></br>
                  <b>Miền Namc</b> :<?php echo $branch3?>
 			   </p>
-                 <?php }?>    
+                 <?php }?>
                  </div>
 			<div class="col-sm-4">
-				 <?php 
-				$sql = "SELECT title,address,phone,email  FROM common where id=2"; 
-				$result = mysql_query($sql, $link);
-				while ($row=mysql_fetch_array($result))
-				{    
+				 <?php
+				$sql = "SELECT title,address,phone,email  FROM common where id=2";
+				$result = mysqli_query($link, $sql);
+				while ($row=mysqli_fetch_array($result))
+				{
 				$title = $row["title"];
 				$address = $row["address"];
 				$phone = $row["phone"];
 				$email = $row["email"];
-				?>	
+				?>
                   <p class="info_text">
 				<?php echo 'Liên Hệ: Mr.VIỄN'?></br>
 				 HotLine:<?php echo $phone?></br>
                  Địa chỉ :<?php echo $address?>
 			   </p>
-                 <?php }?>    
+                 <?php }?>
                  </div>
-				 	
+
         </div>
 		</div>
 	 <div class="hotline-phone">
@@ -62,9 +62,9 @@
     </footer>
     <!-- Modal -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="<?php echo BASE_DOMAIN;?>js/jquery.min.js"></script>
+    <script src="<?php echo $GLOBAL['BASE_DOMAIN'];?>js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php echo BASE_DOMAIN;?>js/bootstrap.min.js"></script>
+    <script src="<?php echo $GLOBAL['BASE_DOMAIN'];?>js/bootstrap.min.js"></script>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

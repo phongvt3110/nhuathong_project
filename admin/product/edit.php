@@ -162,7 +162,7 @@ if (isset($_POST["submit"]))
 		$sql .= "lang = $lang, ";
 		$sql .= "hot = $hot ";
 		$sql .= " WHERE id = $id";
-		mysql_query($sql, $link);
+		mysqli_query($link, $sql);
 		
 ?>
       	  	
@@ -194,8 +194,8 @@ else
 		
 		$id = (int)$_GET["id"];
 		$sql = "SELECT * FROM product WHERE id = $id"; 
-		$result = mysql_query($sql, $link);
-		if ($row=mysql_fetch_array($result))
+		$result = mysqli_query($link, $sql);
+		if ($row=mysqli_fetch_array($result))
 		{
 			$p_id = (int)$row["id"];
 			$p_title = $row["title"];
@@ -250,8 +250,8 @@ else
                       		<option value=0>--- Select ---</option>
 <?php
 $sql = "SELECT id, name, parent_id, subsub_position FROM category ORDER BY position, sub_position, subsub_position"; 
-$result = mysql_query($sql, $link);
-while ($row=mysql_fetch_array($result))
+$result = mysqli_query($link, $sql);
+while ($row=mysqli_fetch_array($result))
 {
 	$p_id = $row["id"];
 	$p_name = $row["name"];
@@ -400,7 +400,7 @@ while ($row=mysql_fetch_array($result))
 				}
 	}	
 }
-mysql_close($link);
+mysqli_close($link);
 ?>                
                 
             </TD>

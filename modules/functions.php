@@ -7,10 +7,10 @@ function toProvinces($pid1, $pid2, $pid3, $link)
 
 		$sql = "SELECT city FROM province WHERE id IN ($condition)";
 		//echo "sql:".$sql;exit;
-		$result = mysql_query($sql, $link);
+		$result = mysqli_query($link, $sql);
 		$province = "";
 
-		while ($row=mysql_fetch_row($result))
+		while ($row=mysqli_fetch_row($result))
 		{
 			if ($provinces == "")
 				$provinces = $row[0];//0
@@ -35,11 +35,11 @@ function cleanQuery($string)	// Preventing SQL Injection with MySQL and PHP
   }
   if (phpversion() >= '4.3.0')
   {
-    $string = mysql_real_escape_string($string);
+    $string = mysqli_real_escape_string($string);
   }
   else
   {
-    $string = mysql_escape_string($string);
+    $string = mysqli_escape_string($string);
   }
   return $string;
 }
@@ -124,15 +124,15 @@ function uploadFile($x, $link)
 		$query = "INSERT INTO upload (name, size, type, content ) ".
 		         "VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
 
-		mysql_query($query) or die('Error, query failed');
+		mysqli_query($query) or die('Error, query failed');
 		
 		$query = "SELECT MAX(id) as vid FROM upload WHERE name = '$fileName' AND size = '$fileSize'";
 		
-		$result = mysql_query($query, $link);
+		$result = mysqli_query($query, $link);
 		$id = 0;
-		if (mysql_num_rows($result)!=0)
+		if (mysqli_num_rows($result)!=0)
 		{
-			while ($row=mysql_fetch_row($result))
+			while ($row=mysqli_fetch_row($result))
 			{
 			$id = $row[0];//vid->0
 			}
@@ -182,7 +182,7 @@ function rennder_options($options = array(), $selection = null) {
         return false;
     }
     $result = "";
-    foreach($option as $option) {
+    foreach($options as $option) {
         $option_str =  '<option value="'.$option['value'].'"';
         if ($selection !== null && $option['value'] == $selection){
             $option_str .= ' selected="selected"';

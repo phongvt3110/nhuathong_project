@@ -1,4 +1,5 @@
 <?php
+include '../config/config.php';
 function getBaseUrl() {
  $pageURL = 'http';
  if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
@@ -9,11 +10,10 @@ function getBaseUrl() {
   $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
  }
  return $pageURL;
-
  }
-
+//define('BASE_DOMAIN','http://'.$_SERVER['HTTP_HOST'].'/'.basename(dirname(__DIR__)).'/');
 ?>
-<?php define('BASE_DOMAIN','http://'.$_SERVER['HTTP_HOST'].'/'); ?>
+
 <!DOCTYPE html>
 <html lang="vn">
   <head>
@@ -30,7 +30,7 @@ function getBaseUrl() {
 		echo "<meta name=\"description\" content=\"Sơn nhà tốt đẹp vn|sơn nhà|tốt đẹp|rẻ đẹp|son nha|tot dep\" />";
         echo "<meta name=\"keywords\" content=\"Sơn nhà tốt đẹp vn,sơn nhà|tốt đẹp,rẻ đẹp,son nha,tot dep\" />";
 		}else if(!empty($pathone[0]) && empty($pathone[1]) && empty($pathone[2])){
-	 	 echo "<title>SƠN NHÀ TỐT ĐẸP VN - SONNHATOTDEP.VN - O989.328.669</title>";
+	 	 echo "<title>CUNG CAP NHUA THONG TOAN VN - NHUATHONG.VN - O989.328.669</title>";
 		  $p1 = explode(".", $pathone[0]);
 		  if($p1[0] == 1){
 		  echo "<meta name=\"description\" content=\"son tuong nha|sơn trường nhà\" />";
@@ -61,8 +61,8 @@ function getBaseUrl() {
 		}
 	?>
     <!-- Bootstrap -->
-    <link  href="<?php echo BASE_DOMAIN;?>css/style.css" rel="stylesheet">
-    <link href="<?php echo BASE_DOMAIN;?>css/bootstrap.min.css" rel="stylesheet">
+    <link  href="<?php echo $GLOBALS['BASE_DOMAIN'];?>css/style.css" rel="stylesheet">
+    <link href="<?php echo $GLOBALS['BASE_DOMAIN'];?>css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
